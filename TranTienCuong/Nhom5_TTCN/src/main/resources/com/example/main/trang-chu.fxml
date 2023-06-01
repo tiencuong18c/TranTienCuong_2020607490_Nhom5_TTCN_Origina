@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+
+<?import javafx.scene.text.Text?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<?import javafx.scene.control.Button?>
+<HBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.controller.TrangChuController">
+    <VBox prefHeight="600.0" prefWidth="200.0" spacing="28.0" style="-fx-background-color: #b6b6b6; -fx-padding: 20 0 0 0">
+        <Button fx:id="trangChuBt" mnemonicParsing="false" onAction="#denTrangChu" prefHeight="70.0" prefWidth="300.0" stylesheets="@../../../css/ButtonStyle.css">
+            <graphic>
+                <HBox onMouseClicked="#denTrangChu" spacing="12" style="-fx-background-color: linear-gradient(to right, #25a6de, #4382eb); -fx-padding: 12 12 12 12; -fx-cursor: hand">
+                    <ImageView fitHeight="40" fitWidth="40">
+                        <Image url="@../../../image/order.png" />
+                    </ImageView>
+                    <Text style=" -fx-font-size: 24px; -fx-font-weight: bold; -fx-fill: white" text="Trang Chủ" />
+                </HBox>
+            </graphic>
+        </Button>
+        <Button fx:id="nhanKhauBt" mnemonicParsing="false" onAction="#denNhanKhau" prefHeight="70.0" prefWidth="300.0" stylesheets="@../../../css/ButtonStyle.css">
+            <graphic>
+                <HBox onMouseClicked="#denNhanKhau" spacing="12" style="-fx-padding: 12 12 12 12; -fx-cursor: hand">
+                    <ImageView fitHeight="40" fitWidth="40">
+                        <Image url="@../../../image/man.png" />
+                    </ImageView>
+                    <Text style=" -fx-font-size: 24px; -fx-font-weight: bold;" text="Nhân Khẩu" />
+                </HBox>
+            </graphic>
+        </Button>
+        <Button fx:id="hoKhauBt" mnemonicParsing="false" onAction="#denHoKhau" prefHeight="70.0" prefWidth="300.0" stylesheets="@../../../css/ButtonStyle.css">
+            <graphic>
+                <HBox onMouseClicked="#denHoKhau" spacing="12" style="-fx-padding: 12 12 12 12; -fx-cursor: hand">
+                    <ImageView fitHeight="40" fitWidth="40">
+                        <Image url="@../../../image/house.png" />
+                    </ImageView>
+                    <Text style=" -fx-font-size: 24px; -fx-font-weight: bold;" text="Hộ Khẩu" />
+                </HBox>
+            </graphic>
+        </Button>
+        <Button fx:id="thongKeBt" mnemonicParsing="false" onAction="#denThongKe" prefHeight="70.0" prefWidth="300.0" stylesheets="@../../../css/ButtonStyle.css">
+            <graphic>
+                <HBox onMouseClicked="#denThongKe" spacing="12" style="-fx-padding: 12 12 12 12; -fx-cursor: hand">
+                    <ImageView fitHeight="40" fitWidth="40">
+                        <Image url="@../../../image/analysis.png" />
+                    </ImageView>
+                    <Text style=" -fx-font-size: 24px; -fx-font-weight: bold;" text="Thống Kê" />
+                </HBox>
+            </graphic>
+        </Button>
+        <Button fx:id="phanAnhBt" mnemonicParsing="false" onAction="#denPhanAnh" prefHeight="70.0" prefWidth="300.0" stylesheets="@../../../css/ButtonStyle.css">
+            <graphic>
+                <HBox onMouseClicked="#denPhanAnh" spacing="12" style="-fx-padding: 12 12 12 12; -fx-cursor: hand">
+                    <ImageView fitHeight="40" fitWidth="40">
+                        <Image url="@../../../image/conversation.png" />
+                    </ImageView>
+                    <Text style=" -fx-font-size: 24px; -fx-font-weight: bold;" text="Phản Ánh" />
+                </HBox>
+            </graphic>
+        </Button>
+    </VBox>
+
+    <VBox style="-fx-padding: 40 40 40 40;" spacing="80" alignment="CENTER">
+        <HBox spacing="44">
+            <HBox alignment="CENTER" prefWidth="280" prefHeight="160" spacing="20" style="-fx-border-width: 2; -fx-border-radius: 20; -fx-border-color: #46b9ff;">
+                <ImageView>
+                    <Image url="@../../../image/people.png"/>
+                </ImageView>
+                <VBox alignment="CENTER" spacing="4">
+                    <Text fx:id="tongNhanKhau" style="-fx-font-size: 52px; -fx-font-weight: bold;"/>
+                    <Text text="Nhân khẩu" style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="280" prefHeight="160" spacing="20" style="-fx-border-width: 2; -fx-border-radius: 20; -fx-border-color: #af8ffe;">
+                <ImageView>
+                    <Image url="@../../../image/mansion-.png"/>
+                </ImageView>
+                <VBox alignment="CENTER" spacing="4">
+                    <Text fx:id="tongHoKhau" style="-fx-font-size: 52px; -fx-font-weight: bold;"/>
+                    <Text text="Hộ khẩu" style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="280" prefHeight="160" spacing="20" style="-fx-border-width: 2; -fx-border-radius: 20; -fx-border-color: #3be8b9;">
+                <ImageView>
+                    <Image url="@../../../image/report.png"/>
+                </ImageView>
+                <VBox alignment="CENTER" spacing="4">
+                    <Text fx:id="tongPhanAnh" style="-fx-font-size: 52px; -fx-font-weight: bold;"/>
+                    <Text text="Phản ánh" style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+                </VBox>
+            </HBox>
+        </HBox>
+        <HBox spacing="44">
+            <HBox alignment="CENTER" prefWidth="280" prefHeight="160" spacing="20" style="-fx-border-width: 2; -fx-border-radius: 20; -fx-border-color: #fd957b;">
+                <ImageView>
+                    <Image url="@../../../image/parasol.png"/>
+                </ImageView>
+                <VBox alignment="CENTER" spacing="4">
+                    <Text fx:id="tamVang" style="-fx-font-size: 52px; -fx-font-weight: bold;"/>
+                    <Text text="Tạm vắng" style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="280" prefHeight="160" spacing="20" style="-fx-border-width: 2; -fx-border-radius: 20; -fx-border-color: #25dae7;">
+                <ImageView>
+                    <Image url="@../../../image/rent.png"/>
+                </ImageView>
+                <VBox alignment="CENTER" spacing="4">
+                    <Text fx:id="tamTru" style="-fx-font-size: 52px; -fx-font-weight: bold;"/>
+                    <Text text="Tạm trú" style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+                </VBox>
+            </HBox>
+            <HBox alignment="CENTER" prefWidth="280" prefHeight="160" spacing="20" style="-fx-border-width: 2; -fx-border-radius: 20; -fx-border-color: #ff6384;">
+                <ImageView>
+                    <Image url="@../../../image/file.png"/>
+                </ImageView>
+                <VBox alignment="CENTER" spacing="4">
+                    <Text fx:id="daXuLy" style="-fx-font-size: 52px; -fx-font-weight: bold;"/>
+                    <Text text="Giải quyết" style="-fx-font-size: 32px; -fx-font-weight: bold;"/>
+                </VBox>
+            </HBox>
+        </HBox>
+    </VBox>
+</HBox>
